@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Editor LAD (editor.main)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "editor.main",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Simulator LAD (simulator.main)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "simulator.main",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}

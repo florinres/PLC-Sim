@@ -1,0 +1,94 @@
+{
+  "components": [
+    {
+      "id": "ton5",
+      "type": "TON",
+      "x": 1420.0,
+      "y": 680.0,
+      "tag": "T1",
+      "params": {
+        "PT": "T#5s"
+      }
+    },
+    {
+      "id": "coil4",
+      "type": "COIL",
+      "x": 1420.0,
+      "y": 540.0,
+      "tag": "Q0.0",
+      "params": {}
+    },
+    {
+      "id": "cmp_eq3",
+      "type": "CMP_EQ",
+      "x": 1220.0,
+      "y": 540.0,
+      "tag": "",
+      "params": {
+        "A": "MW0",
+        "B": "0"
+      }
+    },
+    {
+      "id": "cmp_eq2",
+      "type": "CMP_EQ",
+      "x": 1040.0,
+      "y": 520.0,
+      "tag": "",
+      "params": {
+        "A": "MW0",
+        "B": "0"
+      }
+    },
+    {
+      "id": "rail_l1",
+      "type": "RAIL_L",
+      "x": 960.0,
+      "y": 480.0,
+      "tag": "",
+      "params": {}
+    }
+  ],
+  "wires": [
+    {
+      "from": [
+        "cmp_eq3",
+        "OUT"
+      ],
+      "to": [
+        "ton5",
+        "IN"
+      ]
+    },
+    {
+      "from": [
+        "cmp_eq3",
+        "OUT"
+      ],
+      "to": [
+        "coil4",
+        "in"
+      ]
+    },
+    {
+      "from": [
+        "cmp_eq2",
+        "OUT"
+      ],
+      "to": [
+        "cmp_eq3",
+        "IN"
+      ]
+    },
+    {
+      "from": [
+        "rail_l1",
+        "out"
+      ],
+      "to": [
+        "cmp_eq2",
+        "IN"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "components": [
+    {
+      "id": "rail_r5",
+      "type": "RAIL_R",
+      "x": 480.0,
+      "y": 60.0,
+      "tag": ""
+    },
+    {
+      "id": "coil4",
+      "type": "COIL",
+      "x": 360.0,
+      "y": 80.0,
+      "tag": "Q0.0"
+    },
+    {
+      "id": "nc3",
+      "type": "NC",
+      "x": 240.0,
+      "y": 80.0,
+      "tag": "I0.1"
+    },
+    {
+      "id": "no2",
+      "type": "NO",
+      "x": 120.0,
+      "y": 80.0,
+      "tag": "I0.0"
+    },
+    {
+      "id": "rail_l1",
+      "type": "RAIL_L",
+      "x": 40.0,
+      "y": 60.0,
+      "tag": ""
+    }
+  ],
+  "wires": [
+    {
+      "from": [
+        "coil4",
+        "out"
+      ],
+      "to": [
+        "rail_r5",
+        "in"
+      ]
+    },
+    {
+      "from": [
+        "nc3",
+        "out"
+      ],
+      "to": [
+        "coil4",
+        "in"
+      ]
+    },
+    {
+      "from": [
+        "no2",
+        "out"
+      ],
+      "to": [
+        "nc3",
+        "in"
+      ]
+    },
+    {
+      "from": [
+        "rail_l1",
+        "out"
+      ],
+      "to": [
+        "no2",
+        "in"
+      ]
+    }
+  ]
+}

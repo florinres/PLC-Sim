@@ -1,0 +1,72 @@
+{
+  "components": [
+    {
+      "id": "add4",
+      "type": "ADD",
+      "x": 1240.0,
+      "y": 680.0,
+      "tag": "",
+      "params": {
+        "IN1": "MW0",
+        "IN2": "1",
+        "OUT": "MW1"
+      }
+    },
+    {
+      "id": "rail_r3",
+      "type": "RAIL_R",
+      "x": 1420.0,
+      "y": 600.0,
+      "tag": "",
+      "params": {}
+    },
+    {
+      "id": "rail_l2",
+      "type": "RAIL_L",
+      "x": 940.0,
+      "y": 580.0,
+      "tag": "",
+      "params": {}
+    },
+    {
+      "id": "no1",
+      "type": "NO",
+      "x": 1120.0,
+      "y": 660.0,
+      "tag": "I0.0",
+      "params": {}
+    }
+  ],
+  "wires": [
+    {
+      "from": [
+        "add4",
+        "ENO"
+      ],
+      "to": [
+        "rail_r3",
+        "in"
+      ]
+    },
+    {
+      "from": [
+        "no1",
+        "out"
+      ],
+      "to": [
+        "add4",
+        "EN"
+      ]
+    },
+    {
+      "from": [
+        "rail_l2",
+        "out"
+      ],
+      "to": [
+        "no1",
+        "in"
+      ]
+    }
+  ]
+}
